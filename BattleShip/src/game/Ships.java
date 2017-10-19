@@ -16,11 +16,11 @@ public class Ships {
 		for(int i = 0; i < typeOfShips.length; i++){
 			Ship ship;
 			do{
-				int x = random.nextInt(11 - typeOfShips[i]);
-				int y = random.nextInt(11 - typeOfShips[i]);
+				int x = random.nextInt(10);
+				int y = random.nextInt(10);
 				int position = random.nextInt(2);
 				ship = new Ship(x, y, typeOfShips[i], position);
-			}while(isOverlayOrTouchShip(ship));
+			}while(ship.isOutOfField() || isOverlayOrTouchShip(ship));
 			ships.add(ship);
 		}
 		addShipsToBattlefield();

@@ -36,6 +36,15 @@ public class Ship {
 		return false;
 	}
 	
+	boolean isOutOfField(){
+		for(Cell cell : cells){
+			if(cell.getX() >= 10 || cell.getY() >= 10){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	void addShipToArray(int array [][]){
 		for(Cell cell : cells){
 			array [cell.getX()][cell.getY()] = 1;
