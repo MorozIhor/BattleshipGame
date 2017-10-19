@@ -7,7 +7,7 @@ public class LetsTheGameBegin {
 		Ships ships = new Ships();
 		int [][] array = ships.getBattlefield();
 		
-		System.out.println("~~~~~(Battlefield)~~~~~");
+		System.out.println("~~~~( Battlefield )~~~~");
 		System.out.println();
 		System.out.println("   A B C D E F G H I J");
 		for(int i = 0; i < array.length; i++ ){
